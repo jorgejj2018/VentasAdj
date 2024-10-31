@@ -1,0 +1,17 @@
+---
+const socialLinks = [
+  { name: 'Facebook', url: 'https://facebook.com/ventasadj', icon: '📱' },
+  { name: 'WhatsApp', url: 'https://wa.me/+1234567890', icon: '💬' }
+];
+---
+
+<div class="flex gap-6 justify-center">
+  {socialLinks.map(link => (
+    <a href={link.url} 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="text-3xl hover:scale-110 transition-transform">
+      {link.icon}
+    </a>
+  ))}
+</div>

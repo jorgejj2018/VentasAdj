@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ProductCard from '../components/ProductCard.astro';
+import prueba1 from '.';
+
+const products = [
+  {
+    title: "Base Fija para TV 32-55\"",
+    price: 29.99,
+    image: "https://i.ibb.co/0fy5vdm/Whats-App-Image-2024-10-31-at-11-05-26-AM.jpg",
+    description: "Base resistente para TV con capacidad de hasta 35kg. Instalación sencilla y segura."
+  },
+  {
+    title: "Base Móvil para TV 40-65\"",
+    price: 49.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Base articulada con brazo móvil. Giro de 180° e inclinación ajustable."
+  },
+  {
+    title: "Soporte para Aire Acondicionado",
+    price: 39.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Soporte reforzado para unidades de aire acondicionado. Incluye kit de instalación."
+  },
+  {
+    title: "Base de Techo para TV 32-55\"",
+    price: 59.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Ideal para espacios reducidos. Instalación en techo con sistema de seguridad."
+  },
+  {
+    title: "Soporte AC Industrial",
+    price: 79.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Soporte reforzado para aires acondicionados industriales. Alta resistencia."
+  },
+  {
+    title: "Kit de Instalación Premium",
+    price: 19.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Kit completo con tornillería y accesorios para instalación profesional."
+  }
+];
+---
+
+<Layout title="Productos - Ventas ADJ">
+  <Header />
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-soft-black mb-8 text-center">Nuestros Productos</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {products.map(product => (
+        <ProductCard {...product} />
+      ))}
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+
+---
+
+<Layout title="Nosotros - Ventas ADJ">
+  <Header />
+  <main class="container mx-auto px-4 py-8">
+    <section class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-soft-black mb-8 text-center">Sobre Nosotros</h1>
+      
+      <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+        <h2 class="text-2xl font-semibold text-soft-black mb-4">Nuestra Historia</h2>
+        <p class="text-gray-600 mb-6">
+          En Ventas ADJ, nos especializamos en proporcionar soluciones de montaje seguras y confiables para sus equipos electrónicos. 
+          Con años de experiencia en el mercado, nos hemos convertido en expertos en soportes para TV y aires acondicionados.
+        </p>
+        
+        <h2 class="text-2xl font-semibold text-soft-black mb-4">Nuestro Compromiso</h2>
+        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+          <li>Productos de alta calidad y durabilidad</li>
+          <li>Asesoramiento técnico personalizado</li>
+          <li>Garantía en todos nuestros productos</li>
+          <li>Servicio post-venta excepcional</li>
+          <li>Precios competitivos</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-soft-black mb-4">¿Por qué elegirnos?</h2>
+        <p class="text-gray-600 mb-6">
+          Nos destacamos por ofrecer productos certificados y probados, respaldados por nuestra garantía de satisfacción. 
+          Nuestro equipo está comprometido con brindar el mejor servicio y asesoramiento técnico para asegurar una instalación 
+          segura y duradera.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold text-soft-black mb-4">Contáctanos</h2>
+        <p class="text-gray-600 mb-6">
+          ¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!
+        </p>
+        <SocialLinks />
+      </div>
+    </section>
+  </main>
+</Layout>

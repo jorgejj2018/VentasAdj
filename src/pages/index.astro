@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ProductCard from '../components/ProductCard.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+
+const featuredProducts = [
+  {
+    title: "Base Fija para TV 32-55\"",
+    price: 29.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Base resistente para TV con capacidad de hasta 35kg. Instalación sencilla y segura."
+  },
+  {
+    title: "Base Móvil para TV 40-65\"",
+    price: 49.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Base articulada con brazo móvil. Giro de 180° e inclinación ajustable."
+  },
+  {
+    title: "Soporte para Aire Acondicionado",
+    price: 39.99,
+    image: "https://via.placeholder.com/400x300",
+    description: "Soporte reforzado para unidades de aire acondicionado. Incluye kit de instalación."
+  }
+];
+---
+
+<Layout title="Ventas ADJ - Soportes y Bases para TV">
+  <Header />
+  <main class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <h1 class="text-5xl font-bold text-soft-black mb-4">Ventas ADJ</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Especialistas en soportes y bases para TV, aires acondicionados y más
+      </p>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-soft-black mb-8 text-center">Productos Destacados</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredProducts.map(product => (
+          <ProductCard {...product} />
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/productos" class="inline-block bg-pastel-blue text-soft-black px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors">
+          Ver todos los productos
+        </a>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-pastel-blue rounded-lg p-8 mb-16">
+      <h2 class="text-3xl font-bold text-soft-black mb-6 text-center">¿Por qué elegirnos?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-4xl mb-4">🛡️</div>
+          <h3 class="text-xl font-semibold mb-2">Calidad Garantizada</h3>
+          <p>Productos certificados y probados para tu seguridad</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-4">🚚</div>
+          <h3 class="text-xl font-semibold mb-2">Entrega Rápida</h3>
+          <p>Envíos seguros a todo el país</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-4">💪</div>
+          <h3 class="text-xl font-semibold mb-2">Soporte Técnico</h3>
+          <p>Asesoría en instalación y mantenimiento</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-white rounded-lg p-8 shadow-lg text-center">
+      <h2 class="text-3xl font-bold text-soft-black mb-4">Contáctanos</h2>
+      <p class="text-gray-600 mb-6">
+        ¿Necesitas ayuda para elegir el soporte adecuado? ¡Estamos aquí para ayudarte!
+      </p>
+      <SocialLinks />
+    </section>
+  </main>
+</Layout>
